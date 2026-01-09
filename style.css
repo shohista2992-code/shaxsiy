@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: fixed;
+    width: 100%;
+    background: rgba(15,23,42,0.7);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    color: #38bdf8;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    color: #e5e7eb;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 120px 40px;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+}
+
+.hero-text span {
+    color: #38bdf8;
+}
+
+.hero-text p {
+    margin: 15px 0;
+    color: #cbd5f5;
+}
+
+.hero-text button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    background: #38bdf8;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hero-img img {
+    border-radius: 50%;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ANIMATION */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* SECTIONS */
+section {
+    padding: 100px 60px;
+    text-align: center;
+}
+
+.about p {
+    max-width: 600px;
+    margin: auto;
+    color: #cbd5f5;
+}
+
+/* PORTFOLIO */
+.portfolio-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.portfolio-card {
+    width: 220px;
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.08);
+    background: rgba(56,189,248,0.15);
+}
+
+/* CONTACT */
+.contact {
+    background: #020617;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #64748b;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
